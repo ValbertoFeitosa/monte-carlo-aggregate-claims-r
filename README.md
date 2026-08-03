@@ -6,9 +6,9 @@
 
 ## Overview
 
-This project presents a Monte Carlo simulation framework for studying the distribution of aggregate insurance claims under the Collective Risk Model.
+Aggregate insurance losses are one of the fundamental quantities studied in actuarial science and risk management. Since both the number of claims and the amount of each claim are random variables, the total loss of an insurance portfolio is also random.
 
-The aggregate loss is defined as:
+The Collective Risk Model represents the aggregate loss by
 
 \[
 S = X_1 + X_2 + \cdots + X_N
@@ -16,13 +16,13 @@ S = X_1 + X_2 + \cdots + X_N
 
 where:
 
-- \(N\) represents the number of claims;
-- \(X_i\) represents the value of the \(i\)-th claim;
-- \(S\) represents the aggregate loss of the insurance portfolio.
+- **N** is the random number of claims;
+- **Xᵢ** is the amount of the *i*-th claim;
+- **S** is the aggregate loss of the insurance portfolio.
 
-In this project, claim frequency is modeled using a Poisson distribution, while claim severity is modeled using a Lognormal distribution.
+This project implements a Monte Carlo simulation in **R** to estimate the probability distribution of aggregate losses when the claim frequency follows a Poisson distribution and claim severities follow a Lognormal distribution.
 
-The simulation is implemented in R and is used to estimate the empirical distribution of aggregate losses and compare it with theoretical approximations.
+In addition to the simulation, the project compares the empirical distribution with the Normal and Translated Gamma approximations, illustrating important concepts from actuarial science, probability theory and stochastic simulation.
 
 ---
 
