@@ -2,6 +2,8 @@
   <img src="images/banner.png" alt="Project Banner" width="100%">
 </p>
 
+<br>
+
 # Monte Carlo Simulation of Aggregate Insurance Claims
 
 > A Monte Carlo simulation framework for studying aggregate insurance losses under the Collective Risk Model using a Compound Poisson distribution implemented in R.
