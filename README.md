@@ -104,13 +104,64 @@ These theoretical expressions are compared with the empirical estimates obtained
 
 ## Methodology
 
-*Description of the Monte Carlo simulation algorithm.*
+The aggregate loss distribution is estimated using a Monte Carlo simulation based on the Compound Poisson Collective Risk Model.
+
+The simulation procedure consists of the following steps:
+
+1. Define the model parameters:
+   - Poisson parameter (**λ**) for the claim frequency;
+   - Lognormal parameters (**μ** and **σ**) for the claim severity.
+
+2. Generate a random number of claims from the Poisson distribution.
+
+3. Simulate individual claim amounts from the Lognormal distribution.
+
+4. Compute the aggregate loss by summing all simulated claim amounts.
+
+5. Repeat the procedure for **10,000 Monte Carlo simulations** to obtain the empirical distribution of the aggregate loss.
+
+6. Compute descriptive statistics, including the empirical mean, variance and standard deviation.
+
+7. Compare the simulated results with:
+   - the theoretical moments of the Compound Poisson model;
+   - the Normal approximation;
+   - the Translated Gamma approximation.
+
+Finally, graphical analyses are performed to compare the empirical distribution obtained by simulation with the analytical approximations.
 
 ---
 
 ## Project Structure
 
-*The organization of the project files will be described here.*
+```text
+monte-carlo-aggregate-claims-r/
+│
+├── R/
+│   └── aggregate_claims_simulation.R
+│
+├── images/
+│   ├── banner.png
+│   ├── histogram_simulated_distribution.png
+│   └── distribution_comparison.png
+│
+├── results/
+│   └── simulation_summary.txt
+│
+├── README.md
+├── LICENSE
+└── .gitignore
+```
+
+### Directory Description
+
+| Directory / File | Description |
+|------------------|-------------|
+| **R/** | Contains the complete R implementation of the Monte Carlo simulation. |
+| **images/** | Stores the project banner and all figures generated during the simulation. |
+| **results/** | Contains the numerical summary of the simulation results. |
+| **README.md** | Main project documentation. |
+| **LICENSE** | MIT License for the project. |
+| **.gitignore** | Specifies files and directories ignored by Git. |
 
 ---
 
@@ -120,9 +171,45 @@ These theoretical expressions are compared with the empirical estimates obtained
 
 ---
 
-## Applications
+## Results
 
-*Possible applications in actuarial science, insurance and risk management.*
+The Monte Carlo simulation produced **10,000 independent realizations** of the aggregate insurance loss under the Compound Poisson Collective Risk Model.
+
+The empirical estimates obtained from the simulation showed excellent agreement with the theoretical moments of the aggregate loss distribution.
+
+### Simulation Summary
+
+| Statistic | Simulated | Theoretical |
+|-----------|----------:|------------:|
+| Mean | 1139.30 | 1137.99 |
+| Variance | 33261.80 | 33257.10 |
+| Standard Deviation | 182.38 | 182.37 |
+
+The close agreement between the simulated and theoretical values demonstrates the correctness of the implementation and the convergence of the Monte Carlo estimator.
+
+---
+
+### Simulated Distribution
+
+<p align="center">
+  <img src="images/histogram_simulated_distribution.png" width="80%">
+</p>
+
+*Histogram of the simulated aggregate insurance losses.*
+
+---
+
+### Distribution Comparison
+
+<p align="center">
+  <img src="images/distribution_comparison.png" width="80%">
+</p>
+
+*Comparison between the Monte Carlo simulation, the Normal approximation and the Translated Gamma approximation.*
+
+The Normal approximation provides accurate results due to the relatively large value of the Poisson parameter (λ = 50), making the Central Limit Theorem applicable.
+
+The Translated Gamma approximation also provides an excellent fit by preserving the theoretical mean and variance of the aggregate loss distribution.
 
 ---
 
