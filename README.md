@@ -17,22 +17,22 @@
 
 ## Contents
 
-- [Overview](#overview)
-- [Motivation](#motivation)
-- [Mathematical Background](#mathematical-background)
-- [Theoretical Foundation](#theoretical-foundation)
-- [Methodology](#methodology)
-- [Project Structure](#project-structure)
-- [Results](#results)
-- [Applications](#applications)
-- [How to Run](#how-to-run)
-- [References](#references)
-- [License](#license)
-- [Author](#author)
+| Section |
+|----------|
+| [Overview](#overview) |
+| [Motivation](#motivation) |
+| [Mathematical Background](#mathematical-background) |
+| [Theoretical Foundation](#theoretical-foundation) |
+| [Methodology](#methodology) |
+| [Project Structure](#project-structure) |
+| [Results](#results) |
+| [Applications](#applications) |
+| [How to Run](#how-to-run) |
+| [References](#references) |
+| [License](#license) |
+| [Author](#author) |
 
 ---
-
-## Overview
 
 ## Overview
 
