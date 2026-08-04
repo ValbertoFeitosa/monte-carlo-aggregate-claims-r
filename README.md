@@ -41,13 +41,64 @@ The project combines stochastic simulation, probability theory and actuarial mod
 
 ## Motivation
 
-*This section will explain why Monte Carlo simulation is important for aggregate insurance claims.*
+Insurance companies must estimate the total amount of claims that may occur during a given period in order to determine premium levels, establish technical reserves and assess financial risk.
+
+In the Collective Risk Model, the aggregate loss is represented as the sum of a random number of individual claims. Since both the claim frequency and the claim severity are random variables, obtaining the exact distribution of the aggregate loss is often analytically difficult.
+
+Monte Carlo simulation provides a flexible and powerful computational approach for approximating the aggregate loss distribution without requiring closed-form solutions. It also allows comparisons between empirical results and classical analytical approximations.
+
+This project was developed to illustrate these concepts through a complete implementation in R, combining stochastic simulation with actuarial modeling and statistical analysis.
 
 ---
 
 ## Mathematical Background
 
-*The Collective Risk Model and the probability distributions used in this project will be presented here.*
+The **Collective Risk Model** is one of the fundamental models in actuarial science for representing the total amount of claims incurred by an insurance portfolio during a fixed period.
+
+The aggregate loss is defined as
+
+> **S = X₁ + X₂ + ··· + Xₙ**
+
+where:
+
+- **N** is the random number of claims;
+- **X₁, X₂, ..., Xₙ** are independent and identically distributed claim severities;
+- **S** is the aggregate insurance loss.
+
+In this project, the following probabilistic assumptions are adopted:
+
+### Claim Frequency
+
+The number of claims follows a Poisson distribution:
+
+> **N ~ Poisson(λ)**
+
+where **λ** represents the expected number of claims.
+
+### Claim Severity
+
+Individual claim amounts follow a Lognormal distribution:
+
+> **X ~ Lognormal(μ, σ²)**
+
+where:
+
+- **μ** is the logarithmic mean;
+- **σ²** is the logarithmic variance.
+
+### Aggregate Loss Moments
+
+For the Compound Poisson model, the first two moments of the aggregate loss are given by
+
+**Expected Value**
+
+> **E[S] = λE[X]**
+
+**Variance**
+
+> **Var(S) = λVar(X) + λ(E[X])²**
+
+These theoretical expressions are compared with the empirical estimates obtained through Monte Carlo simulation.
 
 ---
 
