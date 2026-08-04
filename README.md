@@ -14,13 +14,11 @@
 
 ## Overview
 
-Aggregate insurance losses are one of the fundamental quantities studied in actuarial science and risk management. Since both the number of claims and the amount of each claim are random variables, the total loss of an insurance portfolio is also random.
+Aggregate insurance losses are among the most important quantities studied in actuarial science and risk management. Since both the claim frequency and the claim severity are random variables, the total amount paid by an insurance company over a given period is also a random variable.
 
-The Collective Risk Model represents the aggregate loss by
+The Collective Risk Model describes the aggregate loss of an insurance portfolio as the random sum
 
-\[
-S = X_1 + X_2 + \cdots + X_N
-\]
+**S = X₁ + X₂ + ··· + Xₙ**
 
 where:
 
@@ -28,10 +26,17 @@ where:
 - **Xᵢ** is the amount of the *i*-th claim;
 - **S** is the aggregate loss of the insurance portfolio.
 
-This project implements a Monte Carlo simulation in **R** to estimate the probability distribution of aggregate losses when the claim frequency follows a Poisson distribution and claim severities follow a Lognormal distribution.
+This project implements a Monte Carlo simulation framework in **R** to estimate the probability distribution of aggregate insurance losses assuming:
 
-In addition to the simulation, the project compares the empirical distribution with the Normal and Translated Gamma approximations, illustrating important concepts from actuarial science, probability theory and stochastic simulation.
+- **Claim frequency:** Poisson distribution;
+- **Claim severity:** Lognormal distribution.
 
+The simulated aggregate loss distribution is compared with two classical analytical approximations widely used in actuarial science:
+
+- Normal Approximation;
+- Translated Gamma Approximation.
+
+The project combines stochastic simulation, probability theory and actuarial modeling to illustrate how empirical and theoretical approaches can be used to analyze aggregate insurance losses.
 ---
 
 ## Motivation
