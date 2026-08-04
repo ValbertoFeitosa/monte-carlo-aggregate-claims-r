@@ -167,12 +167,6 @@ monte-carlo-aggregate-claims-r/
 
 ## Results
 
-*Simulation results, figures and statistical analyses will be presented here.*
-
----
-
-## Results
-
 The Monte Carlo simulation produced **10,000 independent realizations** of the aggregate insurance loss under the Compound Poisson Collective Risk Model.
 
 The empirical estimates obtained from the simulation showed excellent agreement with the theoretical moments of the aggregate loss distribution.
