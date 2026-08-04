@@ -1,1 +1,122 @@
+============================================================
+MONTE CARLO SIMULATION OF AGGREGATE INSURANCE CLAIMS
+============================================================
 
+Author:
+Valberto Feitosa
+
+Language:
+R
+
+Model:
+Collective Risk Model with a Compound Poisson distribution
+
+------------------------------------------------------------
+MODEL PARAMETERS
+------------------------------------------------------------
+
+Claim Frequency:
+N ~ Poisson(50)
+
+Claim Severity:
+X ~ Lognormal(mu = 3, sigma = 0.5)
+
+Number of Monte Carlo Simulations:
+10,000
+
+Random Seed:
+123
+
+------------------------------------------------------------
+SIMULATED RESULTS
+------------------------------------------------------------
+
+Mean of Aggregate Loss:
+1139.30
+
+Variance of Aggregate Loss:
+33261.80
+
+Standard Deviation of Aggregate Loss:
+182.38
+
+------------------------------------------------------------
+THEORETICAL RESULTS
+------------------------------------------------------------
+
+Expected Value of Claim Severity:
+E[X] = 22.7599
+
+Variance of Claim Severity:
+Var(X) = 147.129
+
+Expected Aggregate Loss:
+E[S] = 1137.99
+
+Variance of Aggregate Loss:
+Var(S) = 33257.10
+
+Standard Deviation of Aggregate Loss:
+SD(S) = 182.37
+
+------------------------------------------------------------
+NORMAL APPROXIMATION
+------------------------------------------------------------
+
+S approximately follows:
+
+Normal(
+  mean = 1137.99,
+  variance = 33257.10
+)
+
+Standard Deviation:
+182.37
+
+------------------------------------------------------------
+TRANSLATED GAMMA APPROXIMATION
+------------------------------------------------------------
+
+Shape Parameter:
+alpha = 94.4733
+
+Rate Parameter:
+beta = 0.0532982
+
+Translation Parameter:
+x0 = -634.548
+
+Approximation:
+
+S = x0 + Y
+
+where:
+
+Y ~ Gamma(
+  shape = 94.4733,
+  rate = 0.0532982
+)
+
+------------------------------------------------------------
+CONCLUSION
+------------------------------------------------------------
+
+The Monte Carlo simulation produced results that were in
+excellent agreement with the theoretical moments of the
+aggregate loss distribution.
+
+The Normal approximation provided satisfactory results due
+to the relatively large Poisson parameter, which supports
+the application of the Central Limit Theorem.
+
+The Translated Gamma approximation also produced consistent
+results, preserving the theoretical mean and variance of the
+aggregate loss distribution.
+
+Both approximations provided results close to those obtained
+by Monte Carlo simulation for the model considered in this
+project.
+
+============================================================
+END OF SUMMARY
+============================================================
