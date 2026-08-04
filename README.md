@@ -101,7 +101,22 @@ For the Compound Poisson model, the first two moments of the aggregate loss are 
 These theoretical expressions are compared with the empirical estimates obtained through Monte Carlo simulation.
 
 ---
+## Theoretical Foundation
 
+This project is grounded in the **Collective Risk Model**, one of the classical frameworks in actuarial science for modeling aggregate insurance losses.
+
+The implementation combines:
+
+- Compound Poisson frequency modeling;
+- Lognormal claim severity;
+- Monte Carlo simulation;
+- Theoretical moment calculations;
+- Normal approximation;
+- Translated Gamma approximation.
+
+Together, these components provide a comprehensive framework for studying aggregate insurance losses and comparing empirical simulation results with classical analytical approximations.
+
+---
 ## Methodology
 
 The aggregate loss distribution is estimated using a Monte Carlo simulation based on the Compound Poisson Collective Risk Model.
@@ -265,13 +280,17 @@ The script will:
 
 ## References
 
-1. Klugman, S. A., Panjer, H. H., & Willmot, G. E. (2012). *Loss Models: From Data to Decisions*. 4th Edition. Wiley.
+1. Bowers, N. L., Gerber, H. U., Hickman, J. C., Jones, D. A., & Nesbitt, C. J. (1997). *Actuarial Mathematics* (2nd ed.). The Society of Actuaries.
 
-2. Kaas, R., Goovaerts, M., Dhaene, J., & Denuit, M. (2008). *Modern Actuarial Risk Theory*. Springer.
+2. Charpentier, A. (Ed.). (2016). *Computational Actuarial Science with R*. Chapman & Hall/CRC.
 
-3. Ross, S. M. (2023). *Introduction to Probability Models*. 13th Edition. Academic Press.
+3. Chwif, L., & Medina, A. C. (2013). *Modelagem e Simulação de Eventos Discretos: Teoria e Prática* (3rd ed.). Elsevier.
 
-4. R Core Team. (2025). *R: A Language and Environment for Statistical Computing*. R Foundation for Statistical Computing.
+4. Ferreira, P. P. (2002). *Modelos de Precificação e Ruína para Seguros de Curto Prazo*. FUNENSEG.
+
+5. Ross, S. M. (2012). *Simulation* (5th ed.). Academic Press.
+
+6. Silva, A. M. (2025). *Fundamentos de Simulação: Aplicações em Planilha Eletrônica, Python e R*. Alta Books.
 
 ---
 
