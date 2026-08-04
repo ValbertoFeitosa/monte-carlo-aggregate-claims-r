@@ -157,6 +157,30 @@ Together, these components provide a comprehensive framework for studying aggreg
 
 The aggregate loss distribution is estimated using a Monte Carlo simulation based on the Compound Poisson Collective Risk Model.
 
+The overall simulation workflow is illustrated below:
+
+```text
+                Model Parameters
+                      │
+                      ▼
+        Simulate Claim Frequency (N)
+                      │
+                      ▼
+       Simulate Claim Severities (X)
+                      │
+                      ▼
+        Compute Aggregate Loss (S)
+                      │
+                      ▼
+      Repeat 10,000 Monte Carlo Runs
+                      │
+                      ▼
+     Compute Descriptive Statistics
+                      │
+                      ▼
+ Compare with Analytical Approximations
+```
+
 The simulation procedure consists of the following steps:
 
 1. Define the model parameters:
@@ -183,6 +207,8 @@ Finally, graphical analyses are performed to compare the empirical distribution 
 ---
 
 ## Project Structure
+
+The repository is organized as follows:
 
 ```text
 monte-carlo-aggregate-claims-r/
@@ -274,6 +300,7 @@ Some practical applications include:
 
 Although this project considers a Compound Poisson model with Lognormal claim severity, the same computational framework can be extended to other claim frequency and severity distributions commonly used in actuarial science.
 
+The project can also serve as an educational resource for undergraduate and graduate courses in Probability, Statistics and Actuarial Science.
 ---
 
 ## How to Run
@@ -346,15 +373,21 @@ Professor and Researcher
 
 Federal Institute of Education, Science and Technology of Ceará (IFCE)
 
+Currently pursuing a **Bachelor's degree in Actuarial Science** at the Federal University of Ceará (UFC).
+
 ### Research Interests
 
 - Data Science
-- Applied Statistics
 - Artificial Intelligence
+- Applied Statistics
 - Actuarial Science
 - Machine Learning
 - Educational Data Mining
 
-**GitHub:** https://github.com/ValbertoFeitosa
+**GitHub**
 
-**LinkedIn:** https://www.linkedin.com/in/valberto-feitosa-7239511b1/
+https://github.com/ValbertoFeitosa
+
+**LinkedIn**
+
+https://www.linkedin.com/in/valberto-feitosa-7239511b1
