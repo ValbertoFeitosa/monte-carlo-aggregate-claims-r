@@ -206,16 +206,80 @@ The Normal approximation provides accurate results due to the relatively large v
 The Translated Gamma approximation also provides an excellent fit by preserving the theoretical mean and variance of the aggregate loss distribution.
 
 ---
+## Applications
+
+The methodology presented in this project can be applied to several problems in actuarial science, insurance and quantitative risk analysis.
+
+Some practical applications include:
+
+- Estimation of aggregate insurance losses.
+- Premium calculation based on collective risk models.
+- Evaluation of technical reserves.
+- Risk measurement and capital allocation.
+- Solvency assessment of insurance portfolios.
+- Monte Carlo simulation for stochastic risk models.
+- Validation of analytical approximations used in actuarial practice.
+- Educational support for courses in Probability, Statistics and Actuarial Science.
+
+Although this project considers a Compound Poisson model with Lognormal claim severity, the same computational framework can be extended to other claim frequency and severity distributions commonly used in actuarial science.
+
+---
 
 ## How to Run
 
-*Instructions for executing the project in R.*
+### Prerequisites
+
+Before running the project, ensure that the following software is installed:
+
+- R (version 4.0 or later)
+- RStudio (recommended)
+
+### Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/ValbertoFeitosa/monte-carlo-aggregate-claims-r.git
+```
+
+Open the file:
+
+```text
+R/aggregate_claims_simulation.R
+```
+
+Run the script in R or RStudio.
+
+### Output
+
+The script will:
+
+- compute the theoretical moments of the Compound Poisson model;
+- perform 10,000 Monte Carlo simulations;
+- compare the simulated and theoretical results;
+- generate the histogram of the aggregate loss distribution;
+- generate the comparison between the Monte Carlo simulation, the Normal approximation and the Translated Gamma approximation;
+- automatically save the figures in the `images` directory.
 
 ---
 
 ## References
 
-*Bibliographic references used in the project.*
+1. Klugman, S. A., Panjer, H. H., & Willmot, G. E. (2012). *Loss Models: From Data to Decisions*. 4th Edition. Wiley.
+
+2. Kaas, R., Goovaerts, M., Dhaene, J., & Denuit, M. (2008). *Modern Actuarial Risk Theory*. Springer.
+
+3. Ross, S. M. (2023). *Introduction to Probability Models*. 13th Edition. Academic Press.
+
+4. R Core Team. (2025). *R: A Language and Environment for Statistical Computing*. R Foundation for Statistical Computing.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**.
+
+See the [LICENSE](LICENSE) file for more information.
 
 ---
 
@@ -227,4 +291,15 @@ Professor and Researcher
 
 Federal Institute of Education, Science and Technology of Ceará (IFCE)
 
-Data Science • Statistics • Artificial Intelligence • Actuarial Science
+### Research Interests
+
+- Data Science
+- Applied Statistics
+- Artificial Intelligence
+- Actuarial Science
+- Machine Learning
+- Educational Data Mining
+
+**GitHub:** https://github.com/ValbertoFeitosa
+
+**LinkedIn:** https://www.linkedin.com/in/valberto-feitosa-7239511b1/
