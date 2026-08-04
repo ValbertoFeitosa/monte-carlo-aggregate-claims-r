@@ -14,6 +14,18 @@
 ![Actuarial Science](https://img.shields.io/badge/Field-Actuarial%20Science-red)
 
 ---
+## Project Summary
+
+| Property | Value |
+|-----------|-------|
+| **Language** | R |
+| **Method** | Monte Carlo Simulation |
+| **Risk Model** | Compound Poisson |
+| **Severity Distribution** | Lognormal |
+| **Applications** | Insurance & Actuarial Science |
+| **License** | MIT |
+
+---
 
 ## Contents
 
